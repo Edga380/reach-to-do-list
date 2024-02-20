@@ -1,0 +1,35 @@
+:root {
+  --list-name-bg-color: rgb(130, 186, 238);
+  --main-bg-color: rgb(230, 230, 230);
+  --button-bg-color: rgb(91, 151, 224);
+  --button-hover-color: rgb(32, 95, 173);
+  --list-border-color: rgb(200, 200, 200);
+}
+
+.dropdown-button-container {
+  margin: 0.5rem;
+  font-family: system-ui;
+}
+
+.dropdown-list {
+  background-color: var(--button-bg-color);
+  position: absolute;
+  font-family: system-ui;
+  border-radius: 0.2rem;
+  border: 2px solid var(--button-hover-color);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0rem;
+  padding: 0;
+}
+
+li {
+  padding: 0.5rem;
+}
+
+li:hover {
+  background-color: var(--button-hover-color);
+  cursor: pointer;
+}
