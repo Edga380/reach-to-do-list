@@ -2,7 +2,13 @@ import { useState } from "react";
 import DropDownMenu from "./DropDownMenu";
 import EditTask from "./EditTask";
 
-const Tasks = ({ tasks, removeTask, taskCompleted, submitEditTask }) => {
+const Tasks = ({
+  tasks,
+  removeTask,
+  taskCompleted,
+  submitEditTask,
+  changeTaskImportance,
+}) => {
   const [isOpenEditTask, setIsOpenEditTask] = useState(
     Array(tasks.length).fill(false)
   );
@@ -56,10 +62,32 @@ const Tasks = ({ tasks, removeTask, taskCompleted, submitEditTask }) => {
         )}
       </div>
       <div className="task-importance">
-        <div
-          className="task-importance-indicator"
-          style={{ backgroundColor: taskImportanceColor(task.importance) }}
-        ></div>
+        {!isOpenEditTask[index] && (
+          <div
+            className="task-importance-indicator"
+            style={{ backgroundColor: taskImportanceColor(task.importance) }}
+          ></div>
+        )}
+        {isOpenEditTask[index] && (
+          <div className="edit-task-importance-button-container">
+            <button
+              style={{ width: "1rem" }}
+              onClick={() => changeTaskImportance(true, index)}
+            >
+              &#x25b4;
+            </button>
+            <div
+              className="task-importance-indicator"
+              style={{ backgroundColor: taskImportanceColor(task.importance) }}
+            ></div>
+            <button
+              style={{ width: "1rem" }}
+              onClick={() => changeTaskImportance(false, index)}
+            >
+              &#x25be;
+            </button>
+          </div>
+        )}
       </div>
       <div className="task-createAt">
         {task.createdAt.slice(0, 10)}

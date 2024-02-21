@@ -15,6 +15,11 @@ This is a simple to-do list web application built with React, utilizing local st
 - By Importance: Users can sort tasks by their assigned importance level.
 - By Date and Time: Tasks can also be sorted based on their due date and time.
 
+7. Filter Tasks:
+
+- By Completion Status: Tasks can be filtered based on whether they are completed or not.
+- By Importance: Users can filter tasks by their assigned importance level.
+
 ## Technologies Used
 
 - React: The frontend of the application is built using React, providing a fast and responsive user interface.

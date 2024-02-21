@@ -69,6 +69,7 @@
   border-left: 0.3rem solid var(--list-border-color);
   border-right: 0.3rem solid var(--list-border-color);
   border-radius: 0rem 0rem 1rem 1rem;
+  margin-bottom: 5rem;
 }
 
 .add-task-input {
@@ -84,7 +85,7 @@
 
 .task {
   display: grid;
-  grid-template-columns: 10% 60% 5% 15% 10%;
+  grid-template-columns: 8% 60% 7% 15% 10%;
   border-bottom: 0.2rem dashed var(--list-border-color);
   padding: 0.5rem 0rem 0.5rem 0rem;
 }
@@ -105,6 +106,27 @@
 .task-createAt {
   align-self: center;
   justify-self: center;
+}
+
+.edit-task-importance-button-container {
+  display: flex;
+  background-color: var(--button-bg-color);
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-tasks-options-container {
+  background-color: var(--button-bg-color);
+  border-radius: 0.2rem;
+  position: absolute;
+  border-radius: 0.2rem;
+  border: 2px solid var(--button-hover-color);
+}
+
+.filter-tasks-option {
+  display: flex;
+  padding: 0.5rem;
 }
 
 button {
@@ -187,7 +209,7 @@ input {
 
 .edit-task-container textarea {
   background-color: var(--main-bg-color);
-  margin: 0.48rem 0.5rem 0.49rem 0rem;
+  margin: 0.49rem 0.5rem 0.49rem 0rem;
   padding: 0.52rem 0.5rem 0.49rem 0rem;
   width: 95%;
   height: 1.1rem;
@@ -247,4 +269,12 @@ input {
 
 .input-task-importance-radio {
   margin: 0.5rem;
+}
+
+.filter-option-importance {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  align-self: center;
+  margin-left: 0.5rem;
 }
