@@ -33,7 +33,9 @@ function App({}) {
   }, []);
 
   useEffect(() => {
-    ApplyFilterTasks();
+    if (JSON.parse(localStorage.getItem("localStorageTasks"))) {
+      ApplyFilterTasks();
+    }
   }, [filters]);
 
   // TOGGLE SECTION
